@@ -1,0 +1,46 @@
+//CONEXION SQL
+
+<?php
+
+  class conexionSQL
+  {
+      public function conectarSQL()
+      {
+        $serverName = "localhost";
+
+        $connectionInfo = array( "Database"=>"PruebaArielBD");
+
+        $conn = sqlsrv_connect( $serverName, $connectionInfo);
+
+        return  $conn;
+
+
+      }
+
+
+  }
+
+//CONEXION MYSQL
+<?php
+
+    class conectar
+    {
+      public function conexion()
+      {
+        $servername = 'localhost';
+        $database = 'pruebabd';
+        $user = 'root';
+        $pass = '';
+
+        $conexion=mysqli_connect($servername, $user, $pass, $database);
+
+        return $conexion;
+      }
+    }
+
+
+?>
+
+
+
+?>
